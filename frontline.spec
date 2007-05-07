@@ -1,13 +1,13 @@
 %define name frontline
 %define version 0.5.4
-%define release %mkrel 8
+%define release %mkrel 9
 
 %define Summary A GUI frontend for autotrace
 %define title Frontline
 %define section Multimedia/Graphics
 
 %define major 0
-%define libname  %mklibname frontline %major
+%define libname %mklibname frontline %major
 
 Summary: 	%Summary
 Name: 		%name
@@ -24,8 +24,10 @@ Source3:	%name.png
 
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
-BuildRequires: gnome-libs-devel libexif-devel 
-BuildRequires: libart_lgpl-devel  libautotrace-devel 
+BuildRequires: gnome-libs-devel
+BuildRequires: libart_lgpl-devel
+BuildRequires: libautotrace-devel
+BuildRequires: libexif-devel
 BuildRequires: libpstoedit-devel 
 BuildRequires: ImageMagick-devel 
 BuildRequires: libpopt-devel
