@@ -106,7 +106,6 @@ Icon=%{name}
 Terminal=false
 Type=Application
 Categories=X-MandrivaLinux-Multimedia-Graphics;Graphics
-Encoding=UTF-8
 EOF
 
 # icon
