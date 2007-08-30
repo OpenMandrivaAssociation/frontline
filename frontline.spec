@@ -105,7 +105,7 @@ Exec=%{_bindir}/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=X-MandrivaLinux-Multimedia-Graphics;Graphics
+Categories=X-MandrivaLinux-Multimedia-Graphics;Graphics;
 EOF
 
 # icon
