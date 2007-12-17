@@ -22,7 +22,6 @@ Source1:	%name-16.png
 Source2:	%name-32.png
 Source3:	%name.png
 
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires: gnome-libs-devel
 BuildRequires: libart_lgpl-devel
