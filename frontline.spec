@@ -1,6 +1,6 @@
 %define name frontline
 %define version 0.5.4
-%define release %mkrel 9
+%define release %mkrel 10
 
 %define Summary A GUI frontend for autotrace
 %define title Frontline
@@ -29,7 +29,7 @@ BuildRequires: libart_lgpl-devel
 BuildRequires: libautotrace-devel
 BuildRequires: libexif-devel
 BuildRequires: libpstoedit-devel 
-BuildRequires: ImageMagick-devel 
+BuildRequires: imagemagick-devel 
 BuildRequires: libpopt-devel
 
 Provides: %libname = %{version}-%{release}
