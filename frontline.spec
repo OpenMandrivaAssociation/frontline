@@ -84,17 +84,6 @@ make
 %find_lang %name
 
 # menu
-mkdir -p %buildroot/%_menudir
-cat > %buildroot/%_menudir/%name << EOF
-?package(%name): \
-command="%_bindir/%name" \
-needs="x11" \
-icon="%name.png" \
-section="%section" \
-title="%title" \
-longtitle="%Summary" \
-xdg="true"
-EOF
 
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -133,7 +122,6 @@ rm -rf %buildroot
 %_datadir/mime-info/*
 %_datadir/gnome/*/*/*
 %_datadir/applications/mandriva-%{name}.desktop
-%_menudir/%name
 %_liconsdir/%name.png
 %_miconsdir/%name.png
 %_iconsdir/%name.png
