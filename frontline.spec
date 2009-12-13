@@ -1,6 +1,6 @@
 %define name frontline
 %define version 0.5.4
-%define release %mkrel 14
+%define release %mkrel 15
 
 %define Summary A GUI frontend for autotrace
 %define title Frontline
@@ -14,13 +14,15 @@ Name: 		%name
 Version: 	%version
 Release: 	%release
 Group: 		Graphics
-License: 	GPL
+License: 	GPLv2+
 Url: 		http://autotrace.sourceforge.net/frontline
 
 Source: http://autotrace.sourceforge.net/%name/%name-%version.tar.bz2
 Source1:	%name-16.png
 Source2:	%name-32.png
 Source3:	%name.png
+Patch0:		frontline-0.5.4-mdv-fix-str-fmt.patch
+Patch1:		frontline-0.5.4-mdv-fix-linkage.patch
 
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -70,6 +72,8 @@ Frontline devel file.
 #
 %prep
 %setup -q
+%patch0 -p1 -b .strfmt
+%patch1 -p1 -b .linkage
 
 %build
 %configure2_5x
