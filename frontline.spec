@@ -1,6 +1,6 @@
 %define name frontline
 %define version 0.5.4
-%define release %mkrel 15
+%define release %mkrel 16
 
 %define Summary A GUI frontend for autotrace
 %define title Frontline
