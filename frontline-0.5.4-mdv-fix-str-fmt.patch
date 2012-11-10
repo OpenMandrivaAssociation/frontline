@@ -1,0 +1,36 @@
+diff -p -up frontline-0.5.4/frontline/at_opts_io.c.strfmt frontline-0.5.4/frontline/at_opts_io.c
+--- frontline-0.5.4/frontline/at_opts_io.c.strfmt	2002-11-08 22:30:16.000000000 +0100
++++ frontline-0.5.4/frontline/at_opts_io.c	2009-12-06 01:04:56.000000000 +0100
+@@ -174,7 +174,7 @@ at_fitting_opts_new_from_argv(int argc, 
+     {
+       gchar * msg = g_strdup_printf("%s: %s", poptBadOption(optCon, 0), poptStrerror(rc));
+       /* TODO gnome_error_dialog(msg); */
+-      g_warning(msg);
++      g_warning("%s", msg);
+       g_free(msg);
+       at_fitting_opts_free(opts);
+       opts = NULL;
+diff -p -up frontline-0.5.4/frontline/fl_dialog.c.strfmt frontline-0.5.4/frontline/fl_dialog.c
+--- frontline-0.5.4/frontline/fl_dialog.c.strfmt	2002-10-24 21:21:45.000000000 +0200
++++ frontline-0.5.4/frontline/fl_dialog.c	2009-12-06 01:04:56.000000000 +0100
+@@ -365,7 +365,7 @@ frontline_dialog_show_error(at_string ms
+   
+   if (msg_type == AT_MSG_WARNING)
+     {
+-      g_warning(msg);
++      g_warning("%s", msg);
+       return ;
+     }
+ 
+diff -p -up frontline-0.5.4/frontline/fl_preview.c.strfmt frontline-0.5.4/frontline/fl_preview.c
+--- frontline-0.5.4/frontline/fl_preview.c.strfmt	2009-12-06 01:05:32.000000000 +0100
++++ frontline-0.5.4/frontline/fl_preview.c	2009-12-06 01:06:15.000000000 +0100
+@@ -618,7 +618,7 @@ frontline_preview_set_splines(FrontlineP
+     at_output_write_func writer;
+     
+     tmp_fd= mkstemp(tmp_name);
+-    g_message(tmp_name);
++    g_message("%s", tmp_name);
+ 
+     if (tmp_fd < 0)
+       {

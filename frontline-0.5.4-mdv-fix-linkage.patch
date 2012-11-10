@@ -1,0 +1,42 @@
+diff -p -up frontline-0.5.4/frontline/Makefile.am.linkage frontline-0.5.4/frontline/Makefile.am
+--- frontline-0.5.4/frontline/Makefile.am.linkage	2002-10-24 19:06:07.000000000 +0200
++++ frontline-0.5.4/frontline/Makefile.am	2009-12-13 00:46:46.000000000 +0100
+@@ -48,14 +48,14 @@ frontline_SOURCES = frontline.c
+ 
+ # Don't use popt in gnome. Instead use libpop directly
+ # because popt in gnome-1.4 doesn't support FLOAT args.
+-frontline_LDADD= $(LIBART2_LIBS)				\
+-                 $(top_builddir)/frontline/libfrontline.a	\
++frontline_LDADD= $(top_builddir)/frontline/libfrontline.a	\
+ 		 $(INTLLIBS)					\
+                  $(top_builddir)/gundo/libgundo.a		\
+                  -lpopt						\
+                  $(GNOME_LIBDIR)				\
+                  $(GNOMEUI_LIBS)				\
+-                 $(AUTOTRACE_LIBS) 
++                 $(AUTOTRACE_LIBS)				\
++		 $(LIBART2_LIBS)
+ # /home/jet/src/popt-1.6.3/.libs/libpopt.a \
+ #-lpopt \
+ 
+diff -p -up frontline-0.5.4/frontline/Makefile.in.linkage frontline-0.5.4/frontline/Makefile.in
+--- frontline-0.5.4/frontline/Makefile.in.linkage	2009-12-13 00:49:00.000000000 +0100
++++ frontline-0.5.4/frontline/Makefile.in	2009-12-13 00:48:43.000000000 +0100
+@@ -177,14 +177,14 @@ frontline_SOURCES = frontline.c
+ 
+ # Don't use popt in gnome. Instead use libpop directly
+ # because popt in gnome-1.4 doesn't support FLOAT args.
+-frontline_LDADD = $(LIBART2_LIBS)				\
+-                 $(top_builddir)/frontline/libfrontline.a	\
++frontline_LDADD = $(top_builddir)/frontline/libfrontline.a	\
+ 		 $(INTLLIBS)					\
+                  $(top_builddir)/gundo/libgundo.a		\
+                  -lpopt						\
+                  $(GNOME_LIBDIR)				\
+                  $(GNOMEUI_LIBS)				\
+-                 $(AUTOTRACE_LIBS) 
++                 $(AUTOTRACE_LIBS)				\
++		 $(LIBART2_LIBS)
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
