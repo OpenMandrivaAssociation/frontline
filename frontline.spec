@@ -1,7 +1,7 @@
 Summary:	A GUI frontend for autotrace
 Name: 		frontline
 Version:	0.5.4
-Release:	17
+Release:	18
 Group:		Graphics
 License:	GPLv2+
 Url:		http://autotrace.sourceforge.net/frontline
