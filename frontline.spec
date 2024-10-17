@@ -4,7 +4,7 @@ Version:	0.5.4
 Release:	18
 Group:		Graphics
 License:	GPLv2+
-Url:		http://autotrace.sourceforge.net/frontline
+Url:		https://autotrace.sourceforge.net/frontline
 
 Source:		http://autotrace.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Source1:	%{name}-16.png
